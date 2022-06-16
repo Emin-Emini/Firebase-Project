@@ -44,10 +44,18 @@ class RegisterViewController: UIViewController {
 // MARK: - Navigate to User
 extension RegisterViewController {
     func navigateInsideUser() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "feedVC")
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true)
+        if Auth.auth().currentUser != nil {
+            UserService.observeUserProfile(Auth.auth().currentUser!.uid) { userProfile in
+                UserService.currentUserProfile = userProfile
+            }
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "insideVC")
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true)
+        } else {
+            UserService.currentUserProfile = nil
+        }
     }
 }
 

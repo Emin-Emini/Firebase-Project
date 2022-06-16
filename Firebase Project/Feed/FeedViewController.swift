@@ -24,13 +24,8 @@ class FeedViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func logOut(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            self.dismiss(animated: true)
-        } catch let error {
-            print("Error: ", error.localizedDescription)
-        }
+    @IBAction func addNewPostTouchInside(_ sender: Any) {
+        
     }
     
 

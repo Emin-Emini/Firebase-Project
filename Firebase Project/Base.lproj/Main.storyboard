@@ -236,7 +236,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Logout"/>
                                 <connections>
                                     <action selector="logOut:" destination="b8P-rb-WwM" eventType="touchUpInside" id="aAz-Yc-zXN"/>
-                                    <action selector="logOut:" destination="NbR-GW-6Xc" eventType="touchUpInside" id="uhW-RM-Yk8"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="8Yd-9m-Ygn">
@@ -265,7 +264,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Delete Account"/>
                                 <connections>
                                     <action selector="deleteAccount:" destination="b8P-rb-WwM" eventType="touchUpInside" id="EZ2-XO-lYa"/>
-                                    <action selector="logOut:" destination="NbR-GW-6Xc" eventType="touchUpInside" id="HJq-QO-DVB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -326,33 +324,33 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" id="MnX-Ll-WCE" customClass="PostTableViewCell" customModule="Firebase_Project" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MnX-Ll-WCE" id="bEd-Iv-euM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="et0-g3-ksP">
-                                                    <rect key="frame" x="16" y="8" width="40" height="40"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="et0-g3-ksP">
+                                                    <rect key="frame" x="16" y="8" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="KRQ-BT-ylq"/>
-                                                        <constraint firstAttribute="height" constant="40" id="Mp3-Bm-E1I"/>
+                                                        <constraint firstAttribute="width" constant="50" id="KRQ-BT-ylq"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Mp3-Bm-E1I"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <integer key="value" value="75"/>
+                                                            <integer key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfu-t6-L3d">
-                                                    <rect key="frame" x="64" y="17.5" width="322" height="21"/>
+                                                    <rect key="frame" x="74" y="22.5" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-So-7om">
-                                                    <rect key="frame" x="16" y="64" width="370" height="21"/>
+                                                    <rect key="frame" x="16" y="74" width="370" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -371,8 +369,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="fileImage" destination="et0-g3-ksP" id="a5N-tb-guq"/>
-                                            <outlet property="fileName" destination="Pfu-t6-L3d" id="Puc-hd-JyH"/>
+                                            <outlet property="postAuthorProfileImage" destination="et0-g3-ksP" id="a5N-tb-guq"/>
+                                            <outlet property="postAuthorUsernameLabel" destination="Pfu-t6-L3d" id="Puc-hd-JyH"/>
+                                            <outlet property="postTextLabel" destination="NNh-So-7om" id="Rck-An-Yop"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -392,7 +391,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="New Post"/>
                                 <connections>
-                                    <action selector="logOut:" destination="NbR-GW-6Xc" eventType="touchUpInside" id="la8-kA-2Id"/>
+                                    <segue destination="p5C-Nx-ofx" kind="showDetail" id="D4u-dL-PeP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -417,6 +416,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5K-8U-L01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2083" y="804"/>
+        </scene>
+        <!--New Post View Controller-->
+        <scene sceneID="HI5-GK-wA6">
+            <objects>
+                <viewController storyboardIdentifier="newPostVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p5C-Nx-ofx" customClass="NewPostViewController" customModule="Firebase_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jpQ-Ip-PG2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jml-MC-ecS">
+                                <rect key="frame" x="16" y="76" width="123.5" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAm-6g-5db">
+                                <rect key="frame" x="337" y="77.5" width="53" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Post"/>
+                                <connections>
+                                    <action selector="addNewPost:" destination="p5C-Nx-ofx" eventType="touchUpInside" id="xIZ-t0-C2I"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type something..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pXP-6K-E2Q">
+                                <rect key="frame" x="12" y="142" width="390" height="668"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nij-OJ-CqU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CAm-6g-5db" firstAttribute="centerY" secondItem="Jml-MC-ecS" secondAttribute="centerY" id="0l0-Ij-Csf"/>
+                            <constraint firstItem="Jml-MC-ecS" firstAttribute="leading" secondItem="Nij-OJ-CqU" secondAttribute="leading" constant="16" id="3TR-3f-Xmw"/>
+                            <constraint firstItem="Nij-OJ-CqU" firstAttribute="trailing" secondItem="pXP-6K-E2Q" secondAttribute="trailing" constant="12" id="Awq-ao-Bqu"/>
+                            <constraint firstItem="Nij-OJ-CqU" firstAttribute="trailing" secondItem="CAm-6g-5db" secondAttribute="trailing" constant="24" id="QUv-Db-i2H"/>
+                            <constraint firstItem="pXP-6K-E2Q" firstAttribute="top" secondItem="Jml-MC-ecS" secondAttribute="bottom" constant="32" id="Uyd-1L-yBE"/>
+                            <constraint firstItem="Jml-MC-ecS" firstAttribute="top" secondItem="Nij-OJ-CqU" secondAttribute="top" constant="32" id="fxb-gb-Feb"/>
+                            <constraint firstItem="Nij-OJ-CqU" firstAttribute="bottom" secondItem="pXP-6K-E2Q" secondAttribute="bottom" constant="32" id="hT5-b1-3Zc"/>
+                            <constraint firstItem="pXP-6K-E2Q" firstAttribute="leading" secondItem="Nij-OJ-CqU" secondAttribute="leading" constant="12" id="qxf-xw-Lak"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="feed" id="NdO-0l-g1l"/>
+                    <connections>
+                        <outlet property="textView" destination="pXP-6K-E2Q" id="Bsb-YZ-3wK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvT-T1-djZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="1515"/>
         </scene>
     </scenes>
     <resources>

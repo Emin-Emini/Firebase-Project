@@ -9,6 +9,6 @@ import Foundation
 
 struct Post {
     var id: String
-    var author: String
+    var author: UserProfile
     var text: String
 }

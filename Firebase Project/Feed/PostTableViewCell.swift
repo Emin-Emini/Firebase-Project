@@ -10,8 +10,9 @@ import UIKit
 class PostTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
-    @IBOutlet weak var fileImage: UIImageView!
-    @IBOutlet weak var fileName: UILabel!
+    @IBOutlet weak var postAuthorProfileImage: UIImageView!
+    @IBOutlet weak var postAuthorUsernameLabel: UILabel!
+    @IBOutlet weak var postTextLabel: UILabel!
     
     // MARK: - View
     override func awakeFromNib() {
@@ -23,6 +24,14 @@ class PostTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func set(post:Post) {
+        ImageService.getImage(withURL: post.author.photoURL) { image in
+            self.postAuthorProfileImage.image = image
+        }
+        postAuthorUsernameLabel.text = post.author.username
+        postTextLabel.text = post.text
     }
 
 }

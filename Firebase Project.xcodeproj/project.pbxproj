@@ -18,6 +18,7 @@
 		19CA1BB6285BD4980005183B /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA1BB5285BD4980005183B /* UserService.swift */; };
 		19CA1BB8285BD5330005183B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA1BB7285BD5330005183B /* UserProfile.swift */; };
 		19CA1BBA285BD8120005183B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA1BB9285BD8120005183B /* ImageService.swift */; };
+		19CA1BBE285BE2850005183B /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA1BBD285BE2850005183B /* NewPostViewController.swift */; };
 		19F32B1C285B674B001F9890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F32B1B285B674B001F9890 /* AppDelegate.swift */; };
 		19F32B1E285B674B001F9890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F32B1D285B674B001F9890 /* SceneDelegate.swift */; };
 		19F32B20285B674B001F9890 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F32B1F285B674B001F9890 /* LoginViewController.swift */; };
@@ -36,6 +37,7 @@
 		19CA1BB5285BD4980005183B /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		19CA1BB7285BD5330005183B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		19CA1BB9285BD8120005183B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		19CA1BBD285BE2850005183B /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		19F32B18285B674B001F9890 /* Firebase Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F32B1B285B674B001F9890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19F32B1D285B674B001F9890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,11 +77,38 @@
 		19CA1BB0285BC8D40005183B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				19CA1BB1285BCAD30005183B /* Post.swift */,
 				19F32B31285B6EF1001F9890 /* FeedViewController.swift */,
 				19CA1BA8285B89690005183B /* PostTableViewCell.swift */,
-				19CA1BB1285BCAD30005183B /* Post.swift */,
+				19CA1BBF285BE28D0005183B /* New Post */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		19CA1BBB285BDDD00005183B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				19CA1BB7285BD5330005183B /* UserProfile.swift */,
+				19CA1BB5285BD4980005183B /* UserService.swift */,
+				19CA1BB3285BCF840005183B /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		19CA1BBC285BDDDC0005183B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				19CA1BB9285BD8120005183B /* ImageService.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		19CA1BBF285BE28D0005183B /* New Post */ = {
+			isa = PBXGroup;
+			children = (
+				19CA1BBD285BE2850005183B /* NewPostViewController.swift */,
+			);
+			path = "New Post";
 			sourceTree = "<group>";
 		};
 		19F32B0F285B674B001F9890 = {
@@ -105,10 +134,8 @@
 				19F32B1D285B674B001F9890 /* SceneDelegate.swift */,
 				19CA1BAF285BC8C00005183B /* Login & Register */,
 				19CA1BB0285BC8D40005183B /* Feed */,
-				19CA1BB3285BCF840005183B /* ProfileViewController.swift */,
-				19CA1BB7285BD5330005183B /* UserProfile.swift */,
-				19CA1BB5285BD4980005183B /* UserService.swift */,
-				19CA1BB9285BD8120005183B /* ImageService.swift */,
+				19CA1BBB285BDDD00005183B /* Profile */,
+				19CA1BBC285BDDDC0005183B /* Helper */,
 				19F32B21285B674B001F9890 /* Main.storyboard */,
 				19F32B24285B674C001F9890 /* Assets.xcassets */,
 				19F32B26285B674C001F9890 /* LaunchScreen.storyboard */,
@@ -209,6 +236,7 @@
 				19F32B30285B6DCA001F9890 /* RegisterViewController.swift in Sources */,
 				19CA1BB2285BCAD30005183B /* Post.swift in Sources */,
 				19CA1BBA285BD8120005183B /* ImageService.swift in Sources */,
+				19CA1BBE285BE2850005183B /* NewPostViewController.swift in Sources */,
 				19CA1BB4285BCF840005183B /* ProfileViewController.swift in Sources */,
 				19CA1BA9285B89690005183B /* PostTableViewCell.swift in Sources */,
 			);

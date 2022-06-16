@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1983E900285B7125002B9C50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1983E8FF285B7125002B9C50 /* GoogleService-Info.plist */; };
 		19F32B1C285B674B001F9890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F32B1B285B674B001F9890 /* AppDelegate.swift */; };
 		19F32B1E285B674B001F9890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F32B1D285B674B001F9890 /* SceneDelegate.swift */; };
 		19F32B20285B674B001F9890 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F32B1F285B674B001F9890 /* LoginViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1983E8FF285B7125002B9C50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19F32B18285B674B001F9890 /* Firebase Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F32B1B285B674B001F9890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19F32B1D285B674B001F9890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				19F32B24285B674C001F9890 /* Assets.xcassets */,
 				19F32B26285B674C001F9890 /* LaunchScreen.storyboard */,
 				19F32B29285B674C001F9890 /* Info.plist */,
+				1983E8FF285B7125002B9C50 /* GoogleService-Info.plist */,
 			);
 			path = "Firebase Project";
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19F32B28285B674C001F9890 /* LaunchScreen.storyboard in Resources */,
+				1983E900285B7125002B9C50 /* GoogleService-Info.plist in Resources */,
 				19F32B25285B674C001F9890 /* Assets.xcassets in Resources */,
 				19F32B23285B674B001F9890 /* Main.storyboard in Resources */,
 			);

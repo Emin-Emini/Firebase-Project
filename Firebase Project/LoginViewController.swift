@@ -20,6 +20,11 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        userAuth()
+    }
+    
     // MARK: - Actions
     @IBAction func loginTouchUp(_ sender: Any) {
         loginFlow()
@@ -39,6 +44,12 @@ extension LoginViewController {
                 return
             }
             
+            self.userAuth()
+        }
+    }
+    
+    func userAuth() {
+        if Auth.auth().currentUser != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "feedVC")
             vc.modalPresentationStyle = .overFullScreen
